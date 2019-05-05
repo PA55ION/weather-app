@@ -36,66 +36,55 @@
 }
 
 body {
-  height: auto;
+  height: 100%;
   max-width: 100%;
   /* display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 auto; */
   font-family: 'Source Code Pro', monospace;
-  
+  color: white;
 }
 .container {
   max-width: 650px;
   height: auto;
-  border: 2px solid red;
   margin: 0 auto;
+  margin-top: 125px;
   /* position: absolute;
   top: 50%;
-  left: 50%;
-  width: 400px;
-  height: 400px;
-  margin-top: -200px;
+  left: 50%; */
+  /* width: 400px;
+  height: 400px; */
+  /* margin-top: -200px;
   margin-left: -200px;
-  border-radius: 2px;
-  box-shadow: 1px 2px 10px 0px  */
+  border-radius: 2px; */
+  /* box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3); */
 
 }
 
-.moon {
-  background-image: url("./moon.png");
+h1 {
+  color: var(--danger);
+  text-align: center;
+  font-size: 55px;
+}
+
+.moon, .blood, .sun {
   background-repeat: no-repeat;
   background-size: 400px;
   background-position: center center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 400px;
-  height: 400px;
-  margin-top: -200px;
-  margin-left: -200px;
-  border-radius: 2px;
-  box-shadow: 1px 2px 10px 0px;
+}
 
-  
-  
+/* .moon {
+  background-image: url("./moon.png");
 }
 
 .sun {
   background-image: url("./sun.png");
-  background-size: 350px;
-  background-repeat: no-repeat;
-  background-position: center center;
-
 }
 
 .blood {
   background-image: url("./blood.png");
-  background-size: 350px;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-
-}
+} */
 
 .city, .country {
   font-size: 20px;
@@ -103,11 +92,12 @@ body {
   text-align: center;
   text-transform: uppercase;
   position: relative;
-  top: 105px;
+  top: 55px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto; 
+  margin: 0 auto;
+  font-size: 27px;
 }
 
 .temp {
@@ -115,7 +105,7 @@ body {
   font-size: 55px;
   text-align: center;
   position: relative;
-  top: 55px;
+  top: 5px;
   left: -10px;
 }
 
@@ -134,7 +124,6 @@ body {
   position: relative;
   top: -18px;
   left: 80px;
-  color: white;
   font-size: 25px;
 }
  
@@ -143,49 +132,100 @@ body {
 }
 
 .wind {
-  border: 3px solid white;
-  width: 75px;
-  height: 85px;
   position: relative;
-  left: 185px;
-  top: 285px;
-  border-radius: 10px;
-  
+  top: -20px;
+
 }
 
 .humidity {
-  border: 3px solid white;
-  width: 75px;
-  height: 85px;
+  float: right;
   position: relative;
-  left: 280px;
-  top: 178px;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  top: -115px;
+  right: 40px;
+
+
 }
 
-.wi-strong-wind {
+.wi-strong-wind, .wi-humidity{
   font-size: 25px;
 }
 
-.wi-humidity {
-  font-size: 25px;
+.wi-thermometer {
+  font-size: 20px;
+  /* position: relative;
+  left: px; */
 }
 
-.tempMin, .tempMax {
-  font-size: 30px;
-  color: var(--danger);
+.weather-condition {
+  font-size: 55px;
+  position: relative;
+  top: -30px;
+  left: 12px;
+  text-align: center;
+  
 }
 
-.weatherClass {
-  font-size: 35px;
+.description {
+  font-size: 15px;
+  text-align: center;
+  position: relative;
+  top: -28px;
+  left: -10px;
 }
 
 .temp-min-max {
+  /* position: absolute; 
+  top: 755px;
+  left: 305px; */
+  float: left;
   position: relative;
-  left: 205px;
-  top: 555px;
+  top: -113px;
+  left: 33px;
+
+}
+
+.wi-owm {
+  font-size: 25px;
+}
+
+@media screen and (max-width: 650px) {
+      .container {
+        max-width: 100%;
+      }
+      .weather-container {
+        max-width: 100%;
+        max-height: auto;
+      }
+}
+
+.weather-container {
+  background-image: url("./assets/scenery_illustration.gif");
+  background-size: 600px;
+  background-repeat: no-repeat;
+  background-position: center center; 
+  text-align: center;
+  background-color: 'rgba(0, 0, 0, 0.35)',
+}
+
+@media only screen and (min-width: 600px) {
+  .weather-container {background-image: url("./assets/blood.png"); }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .weather-container{background-image: url("./assets/sun.png");}
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .weather-container {background-image:url("./assets/nature1.png");}
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .weather-container {
+    background-image: url("./assets/scenery_illustration.gif");
+    color: black;
+    
+  }
 }

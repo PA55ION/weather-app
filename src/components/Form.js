@@ -47,39 +47,18 @@ const Button = styled.button`
 
 
 class Form extends React.Component {
-    // state = {
-    
-    // }
-
-    // handleChange  = (event) => {
-    //     const {name, value} = event.target
-    //     this.setState({ [name]:value })
-    // }
-
-    // handleSubmit = (event) => {
-    //     event.preventDefault();
-    //    this.setState ({
-    //        city: this.state.city,
-    //        country: this.state.country
-    //    })
-    // }
-
     render() {
         return(
         <Header>
               <form onSubmit={this.props.getWeather}>
                   <div>
                     <h1>Weather</h1>
-                    <Input type="text"
+                    <Input 
+                        type="text"
                         name="city"
-                        placeholder="City, Country"
-                        onChange={this.handleChange}                     
+                        placeholder="City..."
+                        // onChange={this.handleChange}         
                     />
-                    {/* <Input type="text"
-                        name="country"
-                        placeholder="Country" 
-                        onChange={this.handleChange}
-                    /> */}
                 <Button>Get Weather</Button>
          
                 </div>

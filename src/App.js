@@ -19,7 +19,8 @@ class App extends React.Component {
         weather_code: '',
         temp_min: '',
         temp_max: '',
-        icon: '',
+        sunrise: '',
+        sunset: '',
         error: ''
     }
 }
@@ -43,25 +44,28 @@ getWeather = async (e) => {
                 weather_code: data.weather[0].id,
                 temp_min: Math.round(data.main.temp_min),
                 temp_max: Math.round(data.main.temp_max),
+                sunrise: data.sys.sunrise,
+                sunset: data.sys.sunset,
                 error: "Please enter the values."
             })
 }
+
+
 render() {
 
-  let date = new Date()
-  let time = date.getHours()
-  let timeOfDay;
-  if (time < 12) {
-    timeOfDay = "Morning"
-    document.body.className = "sun"
-  } else if (time >= 12 && time < 17) {
-    timeOfDay = "Afternoon"
-    document.body.className = "moon"
-  } else {
-    timeOfDay = "Evening"
-    document.body.className = "blood"
-  }
-  
+  // let date = new Date()
+  // let time = date.getHours()
+  // let timeOfDay;
+  // if (time < 12) {
+  //   timeOfDay = "Morning"
+  //   document.body.className = "sun"
+  // } else if (time >= 12 && time < 17) {
+  //   timeOfDay = "Afternoon"
+  //   document.body.className = "moon"
+  // } else {
+  //   timeOfDay = "Evening"
+  //   document.body.className = "blood"
+  // }
     return(
         <div className="container">
           <div className="Icon" data-hour={this.state.time}>
@@ -75,8 +79,10 @@ render() {
                   description={this.state.description}
                   humidity={this.state.humidity}
                   weather_code={this.state.weather_code}
-                  temp_max-={this.state.temp_max}
+                  temp_max={this.state.temp_max}
                   temp_min={this.state.temp_min}
+                  // sunrise={this.state.sunrise}
+                  // sunset={this.state.sunset}
                 />
           </div>
         </div>
