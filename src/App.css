@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+:root {
+  --blue: #5e72e4;
+  --indigo: #5603ad;
+  --purple: #8965e0;
+  --pink: #f3a4b5;
+  --red: #f5365c;
+  --orange: #fb6340;
+  --yellow: #ffd600;
+  --green: #2dce89;
+  --teal: #11cdef;
+  --cyan: #2bffc6;
+  --white: #ffffff;
+  --gray: #6c757d;
+  --gray-dark: #32325d;
+  --light: #ced4da;
+  --lighter: #e9ecef;
+  --primary: #e14eca;
+  --secondary: #f4f5f7;
+  --success: #00f2c3;
+  --info: #1d8cf8;
+  --warning: #ff8d72;
+  --danger: #fd5d93;
+  --light: #adb5bd;
+  --dark: #212529;
+  --default: #344675;
+  --white: #ffffff;
+  --neutral: #ffffff;
+  --darker: black;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+}
+
+body {
+  height: auto;
+  max-width: 100%;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; */
+  font-family: 'Source Code Pro', monospace;
+  
+}
+.container {
+  max-width: 650px;
+  height: auto;
+  border: 2px solid red;
+  margin: 0 auto;
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px  */
+
+}
+
+.moon {
+  background-image: url("./moon.png");
+  background-repeat: no-repeat;
+  background-size: 400px;
+  background-position: center center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px;
+
+  
+  
+}
+
+.sun {
+  background-image: url("./sun.png");
+  background-size: 350px;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+}
+
+.blood {
+  background-image: url("./blood.png");
+  background-size: 350px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+}
+
+.city, .country {
+  font-size: 20px;
+  font-weight: 300px;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  top: 105px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; 
+}
+
+.temp {
+  font-weight: 1000px;
+  font-size: 55px;
+  text-align: center;
+  position: relative;
+  top: 55px;
+  left: -10px;
+}
+
+.wind, .weather-condition, .humidity {
+  text-align: center;
+  position: relative;
+  top: 45px;
+}
+
+.weather-condition {
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.wi-fahrenheit {
+  position: relative;
+  top: -18px;
+  left: 80px;
+  color: white;
+  font-size: 25px;
+}
+ 
+.wi-day-rain-wind{
+  font-size: 75px;
+}
+
+.wind {
+  border: 3px solid white;
+  width: 75px;
+  height: 85px;
+  position: relative;
+  left: 185px;
+  top: 285px;
+  border-radius: 10px;
+  
+}
+
+.humidity {
+  border: 3px solid white;
+  width: 75px;
+  height: 85px;
+  position: relative;
+  left: 280px;
+  top: 178px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.wi-strong-wind {
+  font-size: 25px;
+}
+
+.wi-humidity {
+  font-size: 25px;
+}
+
+.tempMin, .tempMax {
+  font-size: 30px;
+  color: var(--danger);
+}
+
+.weatherClass {
+  font-size: 35px;
+}
+
+.temp-min-max {
+  position: relative;
+  left: 205px;
+  top: 555px;
+}
