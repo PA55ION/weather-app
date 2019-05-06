@@ -141,7 +141,7 @@ h1 {
   float: right;
   position: relative;
   top: -115px;
-  right: 40px;
+  right: 50px;
 
 
 }
@@ -152,8 +152,8 @@ h1 {
 
 .wi-thermometer {
   font-size: 20px;
-  /* position: relative;
-  left: px; */
+  position: relative;
+  left: 5px;
 }
 
 .weather-condition {
@@ -180,7 +180,7 @@ h1 {
   float: left;
   position: relative;
   top: -113px;
-  left: 33px;
+  left: 43px;
 
 }
 
@@ -204,7 +204,6 @@ h1 {
   background-repeat: no-repeat;
   background-position: center center; 
   text-align: center;
-  background-color: 'rgba(0, 0, 0, 0.35)',
 }
 
 @media only screen and (min-width: 600px) {
@@ -213,19 +212,23 @@ h1 {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  .weather-container{background-image: url("./assets/sun.png");}
+  .weather-container{background-image: url("./assets/sun.png");
+    color: grey;
+  }
 } 
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  .weather-container {background-image:url("./assets/nature1.png");}
+  .weather-container {
+    background-image:url("./assets/mountains.png");
+    color: var(--grey);
+  }
 } 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .weather-container {
-    background-image: url("./assets/scenery_illustration.gif");
-    color: black;
-    
+    background-image: url("./assets/scenery.png");
+   
   }
 }
