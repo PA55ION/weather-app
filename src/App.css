@@ -133,14 +133,14 @@ h1 {
 
 .wind {
   position: relative;
-  top: -20px;
+  top: -30px;
 
 }
 
 .humidity {
   float: right;
   position: relative;
-  top: -115px;
+  top: -125px;
   right: 50px;
 
 
@@ -169,7 +169,7 @@ h1 {
   font-size: 15px;
   text-align: center;
   position: relative;
-  top: -28px;
+  top: -18px;
   left: -10px;
 }
 
@@ -179,7 +179,7 @@ h1 {
   left: 305px; */
   float: left;
   position: relative;
-  top: -113px;
+  top: -123px;
   left: 43px;
 
 }
