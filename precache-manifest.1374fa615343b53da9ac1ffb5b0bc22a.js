@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/weather/static/media/weathericons-regular-webfont.e7ef2b44.eot"
   },
   {
-    "revision": "0cf90c3723fd97730afc",
-    "url": "/weather/static/css/main.bbee0082.chunk.css"
+    "revision": "91f6c5dfb62ea7a8fc56",
+    "url": "/weather/static/css/main.33097ba8.chunk.css"
   },
   {
     "revision": "5346c2795f64f3102fab",
@@ -40,8 +40,8 @@ self.__precacheManifest = [
     "url": "/weather/static/media/scenery_illustration.7dfe0067.gif"
   },
   {
-    "revision": "0cf90c3723fd97730afc",
-    "url": "/weather/static/js/main.0ba94b08.chunk.js"
+    "revision": "91f6c5dfb62ea7a8fc56",
+    "url": "/weather/static/js/main.9a6df9d2.chunk.js"
   },
   {
     "revision": "f5b0d0d9cb02e551003132e079435312",
@@ -64,19 +64,19 @@ self.__precacheManifest = [
     "url": "/weather/static/media/weathericons-regular-webfont.8cac70eb.woff"
   },
   {
-    "revision": "4618f0de2a818e7ad3fe880e0b74d04a",
-    "url": "/weather/static/media/weathericons-regular-webfont.4618f0de.ttf"
-  },
-  {
     "revision": "4b658767da6bd92ce2addb3ce512784d",
     "url": "/weather/static/media/weathericons-regular-webfont.4b658767.eot"
+  },
+  {
+    "revision": "4618f0de2a818e7ad3fe880e0b74d04a",
+    "url": "/weather/static/media/weathericons-regular-webfont.4618f0de.ttf"
   },
   {
     "revision": "706e03350eae4c7db8e5",
     "url": "/weather/static/css/2.0e5585cc.chunk.css"
   },
   {
-    "revision": "0f949b1d2a9a703e80f4c422ad47ab18",
+    "revision": "ada1bfa032652514e2433ce919779efb",
     "url": "/weather/index.html"
   }
 ];
