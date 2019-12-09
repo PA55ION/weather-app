@@ -24,18 +24,18 @@ const Input = styled.input`
 
 const Button = styled.button`
     width: 110px;
-    height: 32px;
+    height: 38px;
     border-radius: 7px;
     font-weight: bold;
     color: white;
     cursor: pointer;
     background-color: var(--danger);
     display: inline-block;
-    padding: 6px 12px;
+    padding: 6px 6px;
     margin-bottom: 0;
     font-size: 14px;
     font-weight: 400;
-    line-height: 1.42857143;
+    line-height: 1.3;
     white-space: nowrap;
     vertical-align: middle;
     cursor: pointer;
@@ -57,6 +57,12 @@ class Form extends React.Component {
                         type="text"
                         name="city"
                         placeholder="City..."
+                        // onChange={this.handleChange}         
+                    />
+                    <Input 
+                        type="text"
+                        name="country"
+                        placeholder="Country..."
                         // onChange={this.handleChange}         
                     />
                 <Button>Get Weather</Button>

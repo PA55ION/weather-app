@@ -7,8 +7,8 @@ import './App.css';
 const API_KEY = "050fe05f4b6fa9f366de526cee98af35";
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
         temp: '',
         city: '',
@@ -28,14 +28,13 @@ class App extends React.Component {
 getWeather = async (e) => {
   e.preventDefault();
     const city = e.target.elements.city.value;
-    // const country = e.target.elements.country.value;
-   
-      const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${API_KEY}`);
+    const country = e.target.elements.country.value;
+      const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=imperial&appid=${API_KEY}`);
             const data = await api_call.json();
             
             // console.log(data)
             this.setState({
-                temp: Math.round(data.main.temp),
+                temp: Math.floor(data.main.temp),
                 city: data.name,
                 country: data.sys.country,
                 wind: Math.round(data.wind.speed),
@@ -48,29 +47,15 @@ getWeather = async (e) => {
                 sunset: data.sys.sunset,
                 error: "Please enter the values."
             })
-}
+          } 
 
-
+        
 render() {
-
-  // let date = new Date()
-  // let time = date.getHours()
-  // let timeOfDay;
-  // if (time < 12) {
-  //   timeOfDay = "Morning"
-  //   document.body.className = "sun"
-  // } else if (time >= 12 && time < 17) {
-  //   timeOfDay = "Afternoon"
-  //   document.body.className = "moon"
-  // } else {
-  //   timeOfDay = "Evening"
-  //   document.body.className = "blood"
-  // }
     return(
         <div className="container">
           <div className="Icon" data-hour={this.state.time}>
             <div className="Sky"></div>
-              <Form getWeather={this.getWeather}/>
+              <Form getWeather={this.getWeather} error={this.state.error}/>
                 <Weather 
                   temp={this.state.temp}
                   city={this.state.city}
